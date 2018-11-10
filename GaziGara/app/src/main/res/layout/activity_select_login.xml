@@ -23,8 +23,8 @@
             android:text="Sign in"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@drawable/circle_btn_whi"
-            android:textColor="#fafafa"
+            android:background="@drawable/circle_btn_pri"
+            android:textColor="@color/colorPrimary"
             android:id="@+id/select_btn_register" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="80dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="80dp"
             app:layout_constraintDimensionRatio="5:1"
@@ -47,4 +47,12 @@
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/select_baseline" android:id="@+id/under_baseline">
     </LinearLayout>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@mipmap/white_char_logo"
+            android:id="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/select_baseline"/>
 </android.support.constraint.ConstraintLayout>

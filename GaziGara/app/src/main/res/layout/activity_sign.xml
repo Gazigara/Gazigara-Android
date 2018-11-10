@@ -7,23 +7,14 @@
         android:layout_height="match_parent"
         tools:context=".Sign">
 
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="160dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="160dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintDimensionRatio="1:1" android:id="@+id/constraintLayout2">
-
-    </android.support.constraint.ConstraintLayout>
     <LinearLayout
             android:orientation="vertical"
             android:layout_height="2dp"
             android:background="@color/colorPrimary"
-            android:elevation="3dp"
             android:layout_width="0dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="30dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="30dp"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" android:layout_marginTop="24dp"
-            android:id="@+id/sign_baseline">
+            android:id="@+id/sign_baseline" app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            android:layout_marginTop="24dp">
     </LinearLayout>
     <android.support.constraint.ConstraintLayout
             android:layout_width="0dp"
@@ -124,7 +115,7 @@
             android:layout_marginTop="16dp" android:visibility="invisible">
 
         <TextView
-                android:text="Student Number ( 4자)"
+                android:text="Student Number ( 4자 )"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
@@ -191,10 +182,17 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/circle_btn_pri"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#000000"
             android:id="@+id/sign_btn_sign" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="80dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="80dp"
             app:layout_constraintHorizontal_bias="0.504" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="5.5:1"
     />
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@mipmap/pink_nochar_logo"
+            android:id="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"/>
 </android.support.constraint.ConstraintLayout>
