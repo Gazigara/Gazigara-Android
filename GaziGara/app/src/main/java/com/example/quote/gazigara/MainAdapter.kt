@@ -6,18 +6,16 @@ import android.support.v4.content.ContextCompat.getDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
-import android.widget.BaseAdapter
-import android.widget.ImageButton
-import android.widget.TextView
+import android.widget.*
+import kotlinx.android.synthetic.main.main_item_view.view.*
 
 
 class MainAdapter (val context: Context, private val Items: ArrayList<MainModel>) : BaseAdapter() {
-    val newImage:Drawable = context.getDrawable(R.mipmap.pink_nochar_logo)
-    val newImage1:Drawable = context.getDrawable(R.mipmap.pink_nochar_logo)
-    val newImage2:Drawable = context.getDrawable(R.mipmap.pink_nochar_logo)
-    val newImage3:Drawable = context.getDrawable(R.mipmap.pink_nochar_logo)
-    val newImage4:Drawable = context.getDrawable(R.mipmap.pink_nochar_logo)
+    val newImage = context.getDrawable(R.mipmap.picture1)
+    val newImage1 = context.getDrawable(R.mipmap.picture3)
+    val newImage2 = context.getDrawable(R.mipmap.picture11)
+    val newImage3 = context.getDrawable(R.mipmap.picture6)
+    val newImage4 = context.getDrawable(R.mipmap.picture8)
 
     val imagelist = arrayOf(
         newImage,
@@ -28,11 +26,11 @@ class MainAdapter (val context: Context, private val Items: ArrayList<MainModel>
     )
     override fun getView(count : Int, p1: View?, p2: ViewGroup?): View {
         val itemView : View = LayoutInflater.from(context).inflate(R.layout.main_item_view, null)
-        val itemName : TextView = itemView.findViewById(R.id.name)
-        val background : ImageButton = itemView.findViewById(R.id.ItemImage)
+        val itemName : TextView = itemView.name
+        val backgroundImage : ImageView = itemView.ItemImage
 
-        itemName.setText(Items[0].name)
-        background.setImageDrawable(imagelist[0])
+        itemName.text = Items[count].name
+        backgroundImage.setImageDrawable((imagelist[count]))
 
 
         return itemView
