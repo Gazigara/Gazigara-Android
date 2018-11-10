@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".SelectLogin">
         </activity>
+        <activity android:name=".Sign">
+        </activity>
     </application>
 
 </manifest>
