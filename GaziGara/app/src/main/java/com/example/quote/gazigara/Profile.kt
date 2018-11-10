@@ -3,6 +3,7 @@ package com.example.quote.gazigara
 import android.content.pm.ActivityInfo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_profile.*
 
 class Profile : AppCompatActivity() {
@@ -20,6 +21,10 @@ class Profile : AppCompatActivity() {
             my_btn_my.setTextColor(tocol)
             my_btn_my.background = getDrawable(R.drawable.circle_btn_whi)
             my_btn_request.background = getDrawable(R.drawable.circle_btn_pri)
+            request_panel.visibility = View.INVISIBLE
+            sub_panel.visibility = View.INVISIBLE
+            my_item_list.visibility = View.VISIBLE
+
         }
 
         my_btn_request.setOnClickListener {
@@ -29,6 +34,10 @@ class Profile : AppCompatActivity() {
             my_btn_my.setTextColor(col)
             my_btn_my.background = getDrawable(R.drawable.circle_btn_pri)
             my_btn_request.background = getDrawable(R.drawable.circle_btn_whi)
+            my_item_list.visibility = View. INVISIBLE
+            request_panel.visibility = View.VISIBLE
+            sub_panel.visibility = View.VISIBLE
+
         }
 
         val myAdapter = MyAdapter(this, DataService.MyModel)

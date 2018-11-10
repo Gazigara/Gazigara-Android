@@ -1,6 +1,7 @@
 package com.example.quote.gazigara
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.support.v4.content.ContextCompat.getDrawable
 import android.view.LayoutInflater
@@ -24,6 +25,9 @@ class MainAdapter (val context: Context, private val Items: ArrayList<MainModel>
         newImage3,
         newImage4
     )
+
+
+
     override fun getView(count : Int, p1: View?, p2: ViewGroup?): View {
         val itemView : View = LayoutInflater.from(context).inflate(R.layout.main_item_view, null)
         val itemName : TextView = itemView.name
@@ -32,6 +36,10 @@ class MainAdapter (val context: Context, private val Items: ArrayList<MainModel>
         itemName.text = Items[count].name
         backgroundImage.setImageDrawable((imagelist[count]))
 
+        itemView.setOnClickListener {
+            val newIntent = Intent(context, Info::class.java)
+            context.startActivity(newIntent)
+        }
 
         return itemView
     }

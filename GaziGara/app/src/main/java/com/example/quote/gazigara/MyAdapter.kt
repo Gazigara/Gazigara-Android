@@ -28,6 +28,7 @@ class MyAdapter (val context: Context, private val Items2 : ArrayList<MyModel>) 
         backgroundImage2.setImageDrawable((imagelist[count]))
 
 
+
         return itemView
     }
 
