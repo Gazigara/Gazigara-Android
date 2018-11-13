@@ -64,9 +64,9 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout"/>
 
     <Button
-            android:text="요청한 물품"
+            android:text="요청 현황"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="19dp"
             android:id="@+id/my_btn_request"
             android:textSize="17sp"
             android:background="@drawable/circle_btn_pri"
